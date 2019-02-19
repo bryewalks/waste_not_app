@@ -1,5 +1,5 @@
 class Api::FridgeItemsController < ApplicationController
-<<<<<<< HEAD
+
   def index
     
   end
