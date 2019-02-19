@@ -1,4 +1,5 @@
 class Api::FridgeItemsController < ApplicationController
+<<<<<<< HEAD
   def index
     
   end
@@ -27,5 +28,4 @@ class Api::FridgeItemsController < ApplicationController
   def destroy
 
   end
-
 end
