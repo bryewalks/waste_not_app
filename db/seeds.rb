@@ -6,8 +6,23 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-FridgeItem.create({
+FridgeItem.create!({
                     name: 'cheese',
                     price: 5,
-                    purchase_date: 'today' 
+                    purchase_date: '12-12-2019' 
+                  })
+FridgeItem.create!({
+                    name: 'bacon',
+                    price: 8,
+                    purchase_date: '12-12-2019'
+                  })
+FridgeItem.create!({
+                    name: 'lettuce',
+                    price: 5,
+                    purchase_date: '12-12-2019'
+                  })
+FridgeItem.create!({
+                    name: 'dragonfruit',
+                    price: 12,
+                    purchase_date: '12-12-2019' 
                   })

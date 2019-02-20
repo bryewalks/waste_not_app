@@ -1,0 +1,1 @@
+json.partial! @fridge_item, partial: "fridge_item", as: :fridge_item
