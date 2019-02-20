@@ -11,3 +11,5 @@ Rails.application.routes.draw do
     delete 'fridge_items:/id' => 'fridge_items#destroy'
   end
 end
+
+
