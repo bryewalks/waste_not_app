@@ -6,9 +6,9 @@ Rails.application.routes.draw do
 
     get '/fridge_items' => 'fridge_items#index' 
     post '/fridge_items' => 'fridge_items#create'  
-    get '/fridge_items' => 'fridge_items#show'
-    patch '/fridge_items:/id' => 'fridge_items#update'
-    delete 'fridge_items:/id' => 'fridge_items#destroy'
+    get '/fridge_items/:id' => 'fridge_items#show'
+    patch '/fridge_items/:id' => 'fridge_items#update'
+    delete '/fridge_items/:id' => 'fridge_items#destroy'
   end
 end
 
