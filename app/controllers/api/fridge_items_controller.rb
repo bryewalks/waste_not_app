@@ -1,5 +1,6 @@
 class Api::FridgeItemsController < ApplicationController
-
+  before_action :authenticate_user
+  
   def index
     @fridge_items = FridgeItem.all
     render 'index.json.jbuilder'    
