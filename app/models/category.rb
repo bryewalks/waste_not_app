@@ -1,6 +1,6 @@
 class Category < ApplicationRecord
 
-has many :fridge_items 
+has_many :fridge_items 
 
 end
 
