@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+FridgeItem.create({
+                    name: 'cheese',
+                    price: 5,
+                    purchase_date: 'today' 
+                  })

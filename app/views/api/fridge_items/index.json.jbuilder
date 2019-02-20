@@ -1,0 +1,1 @@
+@fridge_items.name
