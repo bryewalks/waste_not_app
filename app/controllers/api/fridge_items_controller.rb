@@ -2,7 +2,15 @@ class Api::FridgeItemsController < ApplicationController
 
   def index
     @fridge_items = FridgeItem.all
-    render 'index.json.jbuilder'    
+    
+    search_terms = params[:search]
+    if search_terms
+      @fridge_items = @fridge_items.where("name iLIKE ?", "%#{search_terms}")
+    end  
+
+    @search_terms = @search_terms
+    render 'index.json.jbuilder' 
+
   end
 
   def create
@@ -25,6 +33,7 @@ class Api::FridgeItemsController < ApplicationController
 
   def update
     @fridge_item = FridgeItem.find(params[:id])
+
     @fridge_item.name = params[:name] || @fridge_item.name
     @fridge_item.price = params[:price] || @fridge_item.price
     @fridge_item.purchase_date = params[:purchase_date] || @fridge_item.purchase_date
