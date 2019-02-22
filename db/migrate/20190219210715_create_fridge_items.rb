@@ -3,7 +3,7 @@ class CreateFridgeItems < ActiveRecord::Migration[5.2]
     create_table :fridge_items do |t|
       t.string :name
       t.string :shelf_life
-      t.string :purchase_date
+      t.datetime :purchase_date
       t.integer :price
 
       t.timestamps
