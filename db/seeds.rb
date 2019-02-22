@@ -52,35 +52,50 @@ User.create!({
 FridgeItem.create!({
                     name: 'cheese',
                     price: 5,
-                    purchase_date: '12-12-2019', 
+                    purchase_date: nil, 
                     quantity: 1,
                     user_id: 1,
-                    category_id: 3
+                    category_id: 3,
+                    spoiled: false,
+                    spoil_date: nil
                   })
 FridgeItem.create!({
-                    name: 'bacon',
-                    price: 8,
-                    purchase_date: '12-12-2019',
+                    name: 'raw chicken',
+                    price: 6,
+                    purchase_date: nil, 
                     quantity: 1,
                     user_id: 1,
-                    category_id: 10
+                    category_id: 4,
+                    spoiled: false,
+                    spoil_date: nil
                   })
 FridgeItem.create!({
-                    name: 'lettuce',
+                    name: 'tomato',
                     price: 5,
-                    purchase_date: '12-12-2019',
+                    purchase_date: nil, 
                     quantity: 1,
-                    user_id: 2,
-                    category_id: 1
+                    user_id: 1,
+                    category_id: 1,
+                    spoiled: false,
+                    spoil_date: nil
                   })
 FridgeItem.create!({
-                    name: 'dragonfruit',
-                    price: 12,
-                    purchase_date: '12-12-2019',
-                    quantity: 1, 
-                    user_id: 2,
-                    category_id: 1
+                    name: 'ground beef',
+                    price: 5,
+                    purchase_date: nil, 
+                    quantity: 1,
+                    user_id: 1,
+                    category_id: 5,
+                    spoiled: false,
+                    spoil_date: nil
                   })
-
-
-
+FridgeItem.create!({
+                    name: 'eggs',
+                    price: 5,
+                    purchase_date: nil, 
+                    quantity: 1,
+                    user_id: 1,
+                    category_id: 8,
+                    spoiled: false,
+                    spoil_date: nil
+                  })
