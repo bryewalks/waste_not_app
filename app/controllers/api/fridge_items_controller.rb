@@ -1,5 +1,6 @@
 class Api::FridgeItemsController < ApplicationController
-
+  # before_action :authenticate_user
+  
   def index
     @fridge_items = FridgeItem.all
     
@@ -17,7 +18,10 @@ class Api::FridgeItemsController < ApplicationController
     @fridge_item = FridgeItem.new(
                                     name: params[:name],
                                     price: params[:price],
-                                    purchase_date: params[:purchase_date]
+                                    purchase_date: params[:purchase_date],
+                                    quantity: params[:quantity],
+                                    user_id: params[:user_id],
+                                    category_id: params[:category_id]
                                   )
     if @fridge_item.save
       render 'show.json.jbuilder'
