@@ -1,8 +1,8 @@
 class Api::FridgeItemsController < ApplicationController
-  # before_action :authenticate_user
+  before_action :authenticate_user
   
   def index
-    @fridge_items = FridgeItem.all
+    @fridge_items = current_user.fridge_items
     
     search_terms = params[:search]
     if search_terms

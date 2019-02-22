@@ -8,8 +8,8 @@ def spoiled?
   (self.purchase_date + category.shelf_life.days) < Time.now
 end
 
-def spoiled_soon?
-  (self.purchase_date + category.shelf_life.days) = Date.today - 2
-end
+# def spoiled_soon?
+#   (self.purchase_date + category.shelf_life.days) = Date.today - 2
+# end
 
 end

@@ -13,9 +13,9 @@ def spoiled_items
   fridge_items.select {|fridge_item| fridge_item.spoiled? }
 end
 
-def spoiling_soon
-  fridge_items.select {|fridge_item| fridge_item.spoiled_soon? }
-end
+# def spoiling_soon
+#   fridge_items.select {|fridge_item| fridge_item.spoiled_soon? }
+# end
 
 
 end
