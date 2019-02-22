@@ -1,8 +1,8 @@
 class Api::FridgeItemsController < ApplicationController
-  # before_action :authenticate_user
+  before_action :authenticate_user
   
   def index
-    @fridge_items = FridgeItem.all
+    @fridge_items = current_user.fridge_items
     render 'index.json.jbuilder'    
   end
 
@@ -12,7 +12,7 @@ class Api::FridgeItemsController < ApplicationController
                                     price: params[:price],
                                     purchase_date: params[:purchase_date],
                                     quantity: params[:quantity],
-                                    user_id: params[:user_id],
+                                    user_id: current_user.id,
                                     category_id: params[:category_id]
                                   )
     if @fridge_item.save
@@ -45,6 +45,6 @@ class Api::FridgeItemsController < ApplicationController
     fridge_item = FridgeItem.find(params[:id])
     fridge_item.destroy
 
-    render json: {message: "Contact has been deleted"}
+    render json: {message: "Item has been deleted"}
   end
 end
