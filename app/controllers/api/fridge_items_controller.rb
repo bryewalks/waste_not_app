@@ -13,7 +13,7 @@ class Api::FridgeItemsController < ApplicationController
                                     purchase_date: params[:purchase_date],
                                     quantity: params[:quantity],
                                     user_id: current_user.id,
-                                    category_id: params[:category_id]
+                                    category_id: params[:category_id].to_i
                                   )
     if @fridge_item.save
       render 'show.json.jbuilder'

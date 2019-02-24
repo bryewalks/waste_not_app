@@ -13,16 +13,10 @@ has_many :fridge_items
     fridge_items.select {|fridge_item| fridge_item.spoiled? }
   end
 
-  # def spoiling_soon
-  #   fridge_items.select {|fridge_item| fridge_item.spoiled_soon? }
-  # end
-
-  # def mark_spoiled
-  #   fridge_items.each do |item|
-  #     unless item.spoil_date 
-  #       item.spoil_date = item.purchase_date + item.category.shelf_life.days
-  #     end
-  #   end  
-  # end  
+  def check_fridge
+    fridge_items.each do |fridge_item|
+      fridge_item.mark_spoiled
+    end  
+  end
 
 end
