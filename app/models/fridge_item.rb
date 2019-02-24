@@ -1,26 +1,22 @@
 class FridgeItem < ApplicationRecord
-
   validates :name, presence: true
 
-belongs_to :category
-belongs_to :user
+  belongs_to :category
+  belongs_to :user
 
-
-  # def spoiled?
-  #   (self.created_at + category.shelf_life.days) < Time.now
-  # end
+  def spoil_date
+    parsed_date = Date.parse(self.purchase_date)
+    parsed_date + category.shelf_life.days
+  end
 
   def spoiled?
     parsed_date = Date.parse(self.purchase_date)
     Time.now > parsed_date + category.shelf_life.days
   end
 
-  def mark_spoiled
-    if spoiled?
-      self.status = "spoiled!"
-      self.save
-    end
+  def spoiling_soon?
+    today = Date.today
+    parsed_date = Date.parse(self.purchase_date)
+    today.between?(spoil_date - 2, spoil_date)
   end
-
-
 end
