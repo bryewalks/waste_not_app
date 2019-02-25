@@ -131,10 +131,18 @@ FridgeItem.create!({
                     category_id: 8
                   })
 FridgeItem.create!({
-                    name: 'raw shrimp',
+                    name: 'quests raw shrimp',
                     price: "5",
-                    purchase_date: "2019-02-22", 
+                    purchase_date: "2019-02-24", 
                     quantity: "1",
                     user_id: 2,
+                    category_id: 6
+                  })
+FridgeItem.create!({
+                    name: 'raw shrimp',
+                    price: "5",
+                    purchase_date: "2019-02-24", 
+                    quantity: "1",
+                    user_id: 1,
                     category_id: 6
                   })
