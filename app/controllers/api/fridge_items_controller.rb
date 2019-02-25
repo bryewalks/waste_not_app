@@ -32,7 +32,8 @@ class Api::FridgeItemsController < ApplicationController
     @fridge_item.name = params[:name] || @fridge_item.name
     @fridge_item.price = params[:price] || @fridge_item.price
     @fridge_item.purchase_date = params[:purchase_date] || @fridge_item.purchase_date
-
+    @fridge_item.category_id = params[:category_id].to_i || @fridge_item.category_id
+    @fridge_item.quantity = params[:quantity] || @fridge_item.quantity
 
     if @fridge_item.save
       render 'show.json.jbuilder'

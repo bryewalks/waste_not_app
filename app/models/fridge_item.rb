@@ -11,7 +11,7 @@ class FridgeItem < ApplicationRecord
 
   def spoiled?
     parsed_date = Date.parse(self.purchase_date)
-    Time.now > parsed_date + category.shelf_life.days
+    Time.now > spoil_date
   end
 
   def spoiling_soon?
